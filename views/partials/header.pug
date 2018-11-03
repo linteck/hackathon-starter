@@ -1,60 +1,59 @@
-#page-wrapper
-    // Header
-    #header-wrapper
-      header#header.container
-        // Logo
-        #logo
-          h1
-            a(href='/') Braukšana
-        // Nav
-        nav#nav
+// Header
+#header-wrapper
+  header#header.container
+    // Logo
+    #logo
+      h1
+        a(href='/') Braukšana
+    // Nav
+    nav#nav
+      ul
+        li.current
+          a(href='/') Welcome
+        li
+          a(href='#') Dropdown
           ul
-            li.current
-              a(href='/') Welcome
             li
-              a(href='#') Dropdown
+              a(href='#') Lorem ipsum dolor
+            li
+              a(href='#') Magna phasellus
+            li
+              a(href='#') Phasellus consequat
               ul
                 li
                   a(href='#') Lorem ipsum dolor
                 li
+                  a(href='#') Phasellus consequat
+                li
                   a(href='#') Magna phasellus
                 li
-                  a(href='#') Phasellus consequat
-                  ul
-                    li
-                      a(href='#') Lorem ipsum dolor
-                    li
-                      a(href='#') Phasellus consequat
-                    li
-                      a(href='#') Magna phasellus
-                    li
-                      a(href='#') Etiam dolore nisl
-                li
-                  a(href='#') Veroeros feugiat
+                  a(href='#') Etiam dolore nisl
             li
-              a(href='left-sidebar.html') Left Sidebar
-            li
-              a(href='right-sidebar.html') Right Sidebar
-            li
-              a(href='no-sidebar.html') No Sidebar
+              a(href='#') Veroeros feugiat
+        li
+          a(href='left-sidebar.html') Left Sidebar
+        li
+          a(href='right-sidebar.html') Right Sidebar
+        li
+          a(href='no-sidebar.html') No Sidebar
 
-            if !user
-              li(class=(title === 'Login') ? 'active' : undefined)
-                a(href='/login') Login
-              li(class=(title === 'Create Account') ? 'active' : undefined)
-                a(href='/signup') Create Account
-            else
-              li.dropdown(class=(title === 'Account Management') ? 'active' : undefined).nav-item
-                a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
-                  if user.profile.picture
-                    img(src=user.profile.picture)
-                  else
-                    img(src=user.gravatar(60))
-                  span= user.profile.name || user.email || user.id
-                  i.caret
-                ul.dropdown-menu
-                  li.dropdown-item
-                    a(href='/account') My Account
-                  li.divider.dropdown-item
-                  li.dropdown-item
-                    a(href='/logout') Logout
+        if !user
+          li(class=(title === 'Login') ? 'active' : undefined)
+            a(href='/login') Login
+          li(class=(title === 'Create Account') ? 'active' : undefined)
+            a(href='/signup') Create Account
+        else
+          li.dropdown(class=(title === 'Account Management') ? 'active' : undefined).nav-item
+            a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
+              if user.profile.picture
+                img(src=user.profile.picture)
+              else
+                img(src=user.gravatar(60))
+              span= user.profile.name || user.email || user.id
+              i.caret
+            ul.dropdown-menu
+              li.dropdown-item
+                a(href='/account') My Account
+              li.divider.dropdown-item
+              li.dropdown-item
+                a(href='/logout') Logout
