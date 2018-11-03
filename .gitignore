@@ -32,6 +32,9 @@ public/js/lib/popper.min*
 node_modules
 bower_components
 
+# DB directory
+data
+
 # Editors
 .idea
 .vscode
