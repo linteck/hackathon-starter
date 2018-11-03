@@ -1,13 +1,13 @@
 doctype html
 html
   head
+    title #{title} - Feng Lin
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    meta(name='theme-color' content='#4DA5F4')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - Hackathon Starter
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
     link(rel='shortcut icon', href='/favicon.png')
+    link(rel='stylesheet' href='assets/css/main.css')
     link(rel='stylesheet', href='/css/main.css')
 
   body
@@ -19,7 +19,13 @@ html
 
     include partials/footer
 
-    script(src='/js/lib/jquery.min.js')
+    script(src='assets/js/jquery.min.js')
+    script(src='assets/js/jquery.dropotron.min.js')
+    script(src='assets/js/browser.min.js')
+    script(src='assets/js/breakpoints.min.js')
+    script(src='assets/js/util.js')
+    script(src='assets/js/main.js')
+
     script(src='/js/lib/bootstrap.min.js')
     script(src='/js/lib/popper.min.js')
     script(src='/js/main.js')
