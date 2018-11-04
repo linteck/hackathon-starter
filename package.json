@@ -12,7 +12,9 @@
     "postinstall": "npm rebuild node-sass",
     "start": "node app.js",
     "test": "nyc mocha --timeout=10000 --exit",
-    "lint": "eslint \"**/*.js\""
+    "lint": "eslint \"**/*.js\"",
+    "build": "babel public/javascripts -d public/js",
+    "pack": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
@@ -85,7 +87,11 @@
     "nyc": "^13.0.1",
     "sinon": "^6.3.3",
     "sinon-mongoose": "^2.2.1",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.21.0",
+    "webpack-cli": "^3.1.2"
   },
   "engines": {
     "node": ">=8.11.3",
