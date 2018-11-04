@@ -34,6 +34,7 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
+const calendarController = require('./controllers/calendar');
 
 /**
  * API keys and Passport configuration.
@@ -228,6 +229,7 @@ app.get('/index.html', homeController.escapeVerti);
 app.get('/left-sidebar.html', homeController.escapeVertiLeft);
 app.get('/right-sidebar.html', homeController.escapeVertiRight);
 app.get('/no-sidebar.html', homeController.escapeVertiNo);
+app.get('/calendar', calendarController.escapeVertiCalendar);
 
 /**
  * Error Handler.

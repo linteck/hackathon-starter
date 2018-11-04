@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  // Main
+  #main-wrapper
+    .container
+      .row.gtr-200
+        .col-4.col-12-medium
+          // Sidebar
+          #sidebar
+            section.widget.thumbnails
+              h3 Interesting stuff
+              .grid
+                .row.gtr-50
+                  .col-6
+                    a.image.fit(href='#')
+                      img(src='images/pic04.jpg' alt='')
+                  .col-6
+                    a.image.fit(href='#')
+                      img(src='images/pic05.jpg' alt='')
+                  .col-6
+                    a.image.fit(href='#')
+                      img(src='images/pic06.jpg' alt='')
+                  .col-6
+                    a.image.fit(href='#')
+                      img(src='images/pic07.jpg' alt='')
+              a.button.icon.fa-file-text-o(href='#') More
+        .col-8.col-12-medium.imp-medium
+          // Content
+          #content
