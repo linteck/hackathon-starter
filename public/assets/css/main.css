@@ -2101,6 +2101,7 @@ input, select, textarea {
 
 	#footer {
 		margin-top: 0;
+		position: relative;
 	}
 
 		#footer a {
