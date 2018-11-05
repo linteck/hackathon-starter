@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/controllers/calendar.js',
+  entry: './src/index.js',
   devtool: 'inline-source-map',
   mode: 'development',
   resolve: {
@@ -15,12 +15,13 @@ module.exports = {
   plugins: [
     //new CleanWebpackPlugin(['public/js']),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      inject: true,
+      filename: 'views/calendar.pug'
     })
   ],
   output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'controllers'),
+    filename: 'index_bundle.js',
+    path: path.resolve(__dirname, 'examples'),
     pathinfo: true
   },
   module: {
@@ -34,14 +35,12 @@ module.exports = {
       },
       {
         test : /\.pug$/,
-        use: [
-          {
-            loader: 'pug-loader',
-            options: {
-              pretty:  true,
+        exclude: /node_modules/,
+        use: [ require.resolve('babel-loader'),
+            {
+              loader: require.resolve('pug-as-jsx-loader')
             }
-          }
-        ],
+        ]
       },
       {
         test: /\.html$/,
