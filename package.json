@@ -13,7 +13,7 @@
     "start": "node app.js",
     "test": "nyc mocha --timeout=10000 --exit",
     "lint": "eslint \"**/*.js\"",
-    "build": "babel public/javascripts -d public/js",
+    "build": "babel controllers -d output",
     "pack": "webpack --config webpack.config.js"
   },
   "dependencies": {
@@ -22,6 +22,7 @@
     "@octokit/rest": "^15.11.3",
     "ajv": "^6.5.4",
     "ajv-keywords": "^3.2.0",
+    "babel-core": "^6.26.3",
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.1.3",
@@ -78,18 +79,19 @@
   "devDependencies": {
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
     "chai": "^4.1.2",
+    "clean-webpack-plugin": "^0.1.19",
     "eslint": "^5.6.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-chai-friendly": "^0.4.1",
     "eslint-plugin-import": "^2.14.0",
+    "html-webpack-plugin": "^3.2.0",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1",
     "sinon": "^6.3.3",
     "sinon-mongoose": "^2.2.1",
     "supertest": "^3.3.0",
-    "clean-webpack-plugin": "^0.1.19",
-    "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2"
   },
