@@ -18,22 +18,22 @@ const MyCalendar = props => (
 )
 
 exports.escapeVertiCalendar= (req, res) => {
-  let nd = document.getElementById('content');
 
   res.render('calendar', {
-    title: 'Braukšana'
+    title: 'Braukšana',
+    calendar: MyCalendar
   });
 
-  res.render(
-      <div>
-        <BigCalendar
-          localizer={localizer}
-          events={myEventsList}
-          startAccessor="start"
-          endAccessor="end"
-        />
-      </div>,
-      nd
-  );
+//   res.render(
+//       <div>
+//         <BigCalendar
+//           localizer={localizer}
+//           events={myEventsList}
+//           startAccessor="start"
+//           endAccessor="end"
+//         />
+//       </div>,
+//       nd
+//   );
 };
 
