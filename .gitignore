@@ -25,6 +25,9 @@ public/js/lib/bootstrap.min*
 public/js/lib/jquery.min*
 public/js/lib/popper.min*
 
+#Webpack
+public/js/bundle/
+
 # API keys and secrets
 .env
 

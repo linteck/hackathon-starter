@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title #{title} - Feng Lin
+    meta(charSet='utf-8')
+    meta(httpEquiv='X-UA-Compatible', content='IE=edge')
+    meta(name='csrf-token', content=_csrf)
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+    link(rel='shortcut icon', href='/favicon.png')
+    link(rel='stylesheet', href='/css/hackathon.css')
+    link(rel='stylesheet' href='assets/css/main.css')
+
+  body
+    #app
+    script(type="text/javascript" src="/js/bundle/index_bundle.js")

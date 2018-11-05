@@ -34,7 +34,7 @@ const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
-const calendarController = require('./controllers/calendar');
+// const calendarController = require('./controllers/calendar');
 
 /**
  * API keys and Passport configuration.
@@ -64,6 +64,7 @@ mongoose.connection.on('error', (err) => {
  */
 app.set('host', process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0');
 app.set('port', process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080);
+//app.engine('html', require('pug').renderFile)
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 app.use(expressStatusMonitor());
@@ -118,6 +119,7 @@ app.use((req, res, next) => {
   next();
 });
 app.use('/', express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+app.use('/', express.static(path.join(__dirname, 'examples'), { maxAge: 31557600000 }));
 app.use('/js/lib', express.static(path.join(__dirname, 'node_modules/popper.js/dist/umd'), { maxAge: 31557600000 }));
 app.use('/js/lib', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/js'), { maxAge: 31557600000 }));
 app.use('/js/lib', express.static(path.join(__dirname, 'node_modules/jquery/dist'), { maxAge: 31557600000 }));
@@ -229,7 +231,7 @@ app.get('/index.html', homeController.escapeVerti);
 app.get('/left-sidebar.html', homeController.escapeVertiLeft);
 app.get('/right-sidebar.html', homeController.escapeVertiRight);
 app.get('/no-sidebar.html', homeController.escapeVertiNo);
-app.get('/calendar', calendarController.escapeVertiCalendar);
+// app.get('/calendar', calendarController.escapeVertiCalendar);
 
 /**
  * Error Handler.

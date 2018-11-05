@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+// const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,20 +8,20 @@ module.exports = {
   mode: 'development',
   resolve: {
     modules: [
-      path.resolve(__dirname, "public"), 
+      path.resolve(__dirname, "public"),
       "node_modules"
     ]
   },
   plugins: [
-    //new CleanWebpackPlugin(['public/js']),
+    // new CleanWebpackPlugin(['examples']),
     new HtmlWebpackPlugin({
       inject: true,
-      filename: 'views/calendar.pug'
+      filename:'not_used.html'
     })
   ],
   output: {
     filename: 'index_bundle.js',
-    path: path.resolve(__dirname, 'examples'),
+    path: path.resolve(__dirname, 'public/js/bundle'),
     pathinfo: true
   },
   module: {

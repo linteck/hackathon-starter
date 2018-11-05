@@ -1,6 +1,4 @@
-extends layout
-
-block content
+#home-wrapper
   #banner-wrapper
     #banner.box.container
       .row
@@ -13,12 +11,10 @@ block content
               a.button.large.icon.fa-arrow-circle-right(href='#') Ok let&apos;s go
             li
               a.button.alt.large.icon.fa-question-circle(href='#') More info
-  // Features
   #features-wrapper
     .container
       .row
         .col-4.col-12-medium
-          // Box
           section.box.feature
             a.image.featured(href='#')
               img(src='images/pic01.jpg' alt='')
@@ -29,7 +25,6 @@ block content
               p
                 | Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.
         .col-4.col-12-medium
-          // Box
           section.box.feature
             a.image.featured(href='#')
               img(src='images/pic02.jpg' alt='')
@@ -40,7 +35,6 @@ block content
               p
                 | Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.
         .col-4.col-12-medium
-          // Box
           section.box.feature
             a.image.featured(href='#')
               img(src='images/pic03.jpg' alt='')
@@ -50,12 +44,10 @@ block content
                 p Here&apos;s another intriguing subtitle
               p
                 | Phasellus quam turpis, feugiat sit amet in, hendrerit in lectus. Praesent sed semper amet bibendum tristique fringilla.
-  // Main
   #main-wrapper
     .container
       .row.gtr-200
         .col-4.col-12-medium
-          // Sidebar
           #sidebar
             section.widget.thumbnails
               h3 Interesting stuff
@@ -75,7 +67,6 @@ block content
                       img(src='images/pic07.jpg' alt='')
               a.button.icon.fa-file-text-o(href='#') More
         .col-8.col-12-medium.imp-medium
-          // Content
           #content
             section.last
               h2 So what&apos;s this all about?
