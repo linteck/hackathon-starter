@@ -8,5 +8,9 @@
         "throwIfNamespace": false // defaults to true
       }
     ]
+  ],
+  "plugins": [
+    "transform-react-pug",
+    "@babel/plugin-transform-react-jsx"
   ]
 }

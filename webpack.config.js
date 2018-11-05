@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './public/javascripts/main.js',
+  entry: './src/controllers/calendar.js',
   devtool: 'inline-source-map',
   mode: 'development',
   resolve: {
@@ -20,7 +20,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'public/js'),
+    path: path.resolve(__dirname, 'controllers'),
     pathinfo: true
   },
   module: {
