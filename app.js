@@ -227,10 +227,10 @@ app.get('/auth/pinterest/callback', passport.authorize('pinterest', { failureRed
   res.redirect('/api/pinterest');
 });
 
-app.get('/index.html', homeController.escapeVerti);
-app.get('/left-sidebar.html', homeController.escapeVertiLeft);
-app.get('/right-sidebar.html', homeController.escapeVertiRight);
-app.get('/no-sidebar.html', homeController.escapeVertiNo);
+// app.get('/index.html', homeController.escapeVerti);
+// app.get('/left-sidebar.html', homeController.escapeVertiLeft);
+// app.get('/right-sidebar.html', homeController.escapeVertiRight);
+// app.get('/no-sidebar.html', homeController.escapeVertiNo);
 // app.get('/calendar', calendarController.escapeVertiCalendar);
 
 /**

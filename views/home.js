@@ -1,10 +1,20 @@
+// import 'assets/js/jquery.min.js'
+// import 'assets/js/jquery.dropotron.min.js'
+// import 'assets/js/browser.min.js'
+// import 'assets/js/breakpoints.min.js'
+// import 'assets/js/util.js'
+// import 'assets/js/main.js'
+
+// import 'js/lib/bootstrap.min.js'
+// import 'js/lib/popper.min.js'
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import pugHeader from 'partials/header.pug';
 import pugFooter from 'partials/footer.pug';
 // import pugFlash from '../partials/flash.pug';
 import pugLayout from 'layout.pug';
-import pugHome from 'home.pug';
+import pugInstructors from 'instructors.pug';
 
 class ExHeader extends React.Component {
   render() {
@@ -27,7 +37,7 @@ class ExFooter extends React.Component {
 
 class ExContent extends React.Component {
   render() {
-    return pugHome.call(this);
+    return pugInstructors.call(this);
   }
 };
 
@@ -38,9 +48,7 @@ class ExLayout extends React.Component {
 };
 
 /* eslint-env jquery, browser */
-$(document).ready(() => {
-  ReactDOM.render(
-    <ExLayout />,
-    document.getElementById('app')
-  );
-});
+ReactDOM.render(
+  <ExLayout />,
+  document.getElementById('app')
+);
