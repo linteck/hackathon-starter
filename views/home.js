@@ -23,7 +23,7 @@ import ExCalendar from 'calendar';
 class HeadButton extends React.Component {
   handleClick () {
     ReactDOM.render(
-      <ExCalendar />,
+      <LayoutCalendar />,
       document.getElementById('app')
     );
   };
@@ -51,20 +51,28 @@ class ExFooter extends React.Component {
 //   }
 // };
 
-class ExContent extends React.Component {
+class ExInstructors extends React.Component {
   render() {
     return pugInstructors.call(this);
   }
 };
 
-class ExLayout extends React.Component {
+class ExHome extends React.Component {
   render() {
+    const ExContent = ExInstructors;
+    return pugLayout.call(this, {ExHeader, ExFooter, ExContent});
+  }
+};
+
+class LayoutCalendar extends React.Component {
+  render() {
+    const ExContent = ExCalendar;
     return pugLayout.call(this, {ExHeader, ExFooter, ExContent});
   }
 };
 
 /* eslint-env jquery, browser */
 ReactDOM.render(
-  <ExLayout />,
+  <ExHome />,
   document.getElementById('app')
 );
