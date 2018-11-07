@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import pugHeader from '../views/partials/header.pug';
-import pugFooter from '../views/partials/footer.pug';
-// import pugFlash from '../views/partials/flash.pug';
-import pugLayout from '../views/layout.pug';
-import pugHome from '../views/home.pug';
+import pugHeader from 'partials/header.pug';
+import pugFooter from 'partials/footer.pug';
+// import pugFlash from '../partials/flash.pug';
+import pugLayout from 'layout.pug';
+import pugHome from 'home.pug';
 
 class ExHeader extends React.Component {
   render() {
@@ -37,8 +37,10 @@ class ExLayout extends React.Component {
   }
 };
 
-ReactDOM.render(
-  <ExLayout />,
-  document.getElementById('app')
-);
-
+/* eslint-env jquery, browser */
+$(document).ready(() => {
+  ReactDOM.render(
+    <ExLayout />,
+    document.getElementById('app')
+  );
+});

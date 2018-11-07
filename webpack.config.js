@@ -3,12 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './views/index.js',
   devtool: 'inline-source-map',
   mode: 'development',
   resolve: {
     modules: [
       path.resolve(__dirname, "public"),
+      path.resolve(__dirname, "views"),
       "node_modules"
     ]
   },
