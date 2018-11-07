@@ -10,15 +10,31 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+// import PropTypes from 'prop-types';
+// import { withStyles } from '@material-ui/core/styles';
+// import Button from '@material-ui/core/Button';
 import pugHeader from 'partials/header.pug';
 import pugFooter from 'partials/footer.pug';
 // import pugFlash from '../partials/flash.pug';
 import pugLayout from 'layout.pug';
 import pugInstructors from 'instructors.pug';
+import ExCalendar from 'calendar';
+
+class HeadButton extends React.Component {
+  handleClick () {
+    ReactDOM.render(
+      <ExCalendar />,
+      document.getElementById('app')
+    );
+  };
+  render() {
+    return (<a onClick={this.handleClick}> Calendar </a>)
+  }
+};
 
 class ExHeader extends React.Component {
   render() {
-    return pugHeader.call(this);
+    return pugHeader.call(this, {HeadButton});
   }
 };
 
