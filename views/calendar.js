@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'
+//import 'bootstrap/dist/css/bootstrap.min.css'
 //import 'font-awesome/css/font-awesome.min.css'
 import 'react-big-calendar/lib/less/styles.less'
 //import './styles.less'
@@ -13,7 +13,7 @@ import myEventsList from 'eventslist'
 // to the correct localizer.
 const localizer = BigCalendar.momentLocalizer(moment) // or globalizeLocalizer
 const ExCalendar = props => (
-  <div>
+  <div  className="calendar">
     <BigCalendar
       localizer={localizer}
       events={myEventsList}
