@@ -63,6 +63,7 @@ class LayoutCalendar extends React.Component {
 
 /* eslint-env jquery, browser */
 ReactDOM.render(
-  <ExHome />,
+  //<ExHome />,
+  <LayoutCalendar />,
   document.getElementById('app')
 );

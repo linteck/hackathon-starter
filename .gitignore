@@ -27,6 +27,7 @@ public/js/lib/popper.min*
 
 #Webpack
 public/js/bundle/
+package-lock.json
 
 # API keys and secrets
 .env
