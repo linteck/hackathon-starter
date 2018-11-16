@@ -2,6 +2,7 @@
   "extends": [
     "airbnb-base",
     "plugin:import/react",
+    "standard"
   ],
   "env": {
     "node": true,
@@ -26,6 +27,7 @@
     "no-shadow": 0,
     "no-console": 0,
     "no-plusplus": 0,
+    "semi": [1, "always"],
     "no-unused-expressions": 0,
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
     "chai-friendly/no-unused-expressions": 2,

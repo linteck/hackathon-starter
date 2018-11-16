@@ -11,24 +11,24 @@ import pugInstructors from 'instructors.pug';
 import ExCalendar from 'calendar';
 
 class HeadButton extends React.Component {
-  static handleClick() {
+  static handleClick () {
     ReactDOM.render(<LayoutCalendar />,
       document.getElementById('app'));
   }
 
-  render() {
+  render () {
     return (<a onClick={this.handleClick}> {this.props.text}</a>);
   }
 }
 
 class ExHeader extends React.Component {
-  render() {
+  render () {
     return pugHeader.call(this, { HeadButton });
   }
 }
 
 class ExFooter extends React.Component {
-  render() {
+  render () {
     return pugFooter.call(this);
   }
 }
@@ -41,20 +41,20 @@ class ExFooter extends React.Component {
 // };
 
 class ExInstructors extends React.Component {
-  render() {
+  render () {
     return pugInstructors.call(this);
   }
 }
 
 class ExHome extends React.Component {// eslint-disable-line no-unused-vars
-  render() {
+  render () {
     const ExContent = ExInstructors;
     return pugLayout.call(this, { ExHeader, ExFooter, ExContent });
   }
 }
 
 class LayoutCalendar extends React.Component {
-  render() {
+  render () {
     const ExContent = ExCalendar;
     return pugLayout.call(this, { ExHeader, ExFooter, ExContent });
   }
