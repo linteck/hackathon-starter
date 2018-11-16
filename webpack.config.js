@@ -8,16 +8,16 @@ module.exports = {
   mode: 'development',
   resolve: {
     modules: [
-      path.resolve(__dirname, "public"),
-      path.resolve(__dirname, "views"),
-      "node_modules"
+      path.resolve(__dirname, 'public'),
+      path.resolve(__dirname, 'views'),
+      'node_modules'
     ]
   },
   plugins: [
     // new CleanWebpackPlugin(['examples']),
     new HtmlWebpackPlugin({
       inject: true,
-      filename:'not_used.html'
+      filename: 'not_used.html'
     })
   ],
   output: {
@@ -31,23 +31,23 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
+          loader: 'babel-loader'
         }
       },
       {
-        test : /\.pug$/,
+        test: /\.pug$/,
         exclude: /node_modules/,
-        use: [ require.resolve('babel-loader'),
-            {
-              loader: require.resolve('pug-as-jsx-loader')
-            }
+        use: [require.resolve('babel-loader'),
+          {
+            loader: require.resolve('pug-as-jsx-loader')
+          }
         ]
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader"
+            loader: 'html-loader'
           }
         ]
       },
