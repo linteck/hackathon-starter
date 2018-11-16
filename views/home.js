@@ -11,7 +11,7 @@ import pugInstructors from 'instructors.pug';
 import ExCalendar from 'calendar';
 
 class HeadButton extends React.Component {
-  handleClick() {
+  static handleClick() {
     ReactDOM.render(<LayoutCalendar />,
       document.getElementById('app'));
   }
@@ -46,7 +46,7 @@ class ExInstructors extends React.Component {
   }
 }
 
-class ExHome extends React.Component {
+class ExHome extends React.Component {// eslint-disable-line no-unused-vars
   render() {
     const ExContent = ExInstructors;
     return pugLayout.call(this, { ExHeader, ExFooter, ExContent });

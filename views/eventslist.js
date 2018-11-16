@@ -109,4 +109,4 @@ export default [
     start: new Date(2018, 10, 7, 10, 30, 0),
     end: new Date(2018, 10, 7, 12, 0, 0),
   },
-]
+];

@@ -15,7 +15,7 @@
         "modules": true
     }
   },
-  "plugins": ["chai-friendly"],
+  "plugins": ["chai-friendly", "eslint-plugin-react"],
   "rules": {
     "comma-dangle": 0,
     "consistent-return": 0,
@@ -28,7 +28,8 @@
     "no-plusplus": 0,
     "no-unused-expressions": 0,
     "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
-    "chai-friendly/no-unused-expressions": 2
+    "chai-friendly/no-unused-expressions": 2,
+    "react/jsx-uses-vars": [2]
   },
   "settings": {
       "import/resolver": {
