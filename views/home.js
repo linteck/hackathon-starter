@@ -11,28 +11,27 @@ import pugInstructors from 'instructors.pug';
 import ExCalendar from 'calendar';
 
 class HeadButton extends React.Component {
-  handleClick () {
-    ReactDOM.render(
-      <LayoutCalendar />,
-      document.getElementById('app')
-    );
-  };
-  render() {
-    return (<a onClick={this.handleClick}> Calendar </a>)
+  handleClick() {
+    ReactDOM.render(<LayoutCalendar />,
+      document.getElementById('app'));
   }
-};
+
+  render() {
+    return (<a onClick={this.handleClick}> {this.props.text}</a>);
+  }
+}
 
 class ExHeader extends React.Component {
   render() {
-    return pugHeader.call(this, {HeadButton});
+    return pugHeader.call(this, { HeadButton });
   }
-};
+}
 
 class ExFooter extends React.Component {
   render() {
     return pugFooter.call(this);
   }
-};
+}
 
 // class ExFlash extends React.Component {
 //   render() {
@@ -45,27 +44,25 @@ class ExInstructors extends React.Component {
   render() {
     return pugInstructors.call(this);
   }
-};
+}
 
 class ExHome extends React.Component {
   render() {
     const ExContent = ExInstructors;
-    return pugLayout.call(this, {ExHeader, ExFooter, ExContent});
+    return pugLayout.call(this, { ExHeader, ExFooter, ExContent });
   }
-};
+}
 
 class LayoutCalendar extends React.Component {
   render() {
     const ExContent = ExCalendar;
-    return pugLayout.call(this, {ExHeader, ExFooter, ExContent});
+    return pugLayout.call(this, { ExHeader, ExFooter, ExContent });
   }
-};
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   /* eslint-env jquery, browser */
-  ReactDOM.render(
-    //<ExHome />,
-    <LayoutCalendar />,
-    document.getElementById('app')
-  );
-})
+  // <ExHome />,
+  ReactDOM.render(<LayoutCalendar />,
+    document.getElementById('app'));
+});
