@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import 'react-big-calendar/lib/less/styles.less';
 import BigCalendar from 'react-big-calendar';
 import moment from 'moment';
 import myEventsList from 'eventslist';
+import LayoutBooking from 'booking';
 
 class ExCalendar extends React.Component {
   constructor (...args) {
@@ -11,20 +13,22 @@ class ExCalendar extends React.Component {
     this.state = { events: myEventsList };
   }
 
-  handleSelect = ({ start, end }) => {
-    const title = window.prompt('New Event name');
-    if (title) {
-      this.setState({
-        events: [
-          ...this.state.events,
-          {
-            start,
-            end,
-            title,
-          },
-        ],
-      });
-    }
+  handleSelect = ({ 
+      start,
+      end,
+      action,
+      bounds,
+      box
+      }) => {
+          console.log({ 
+      start,
+      end,
+      action,
+      bounds,
+      box
+      })
+    ReactDOM.render(<LayoutBooking/>,
+      document.getElementById('app'));
   }
 
   render () {
